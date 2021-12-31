@@ -1,0 +1,9 @@
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/libcpu/arm/cortex-m3/cpuport.c
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rtthread\cpuport.o: ../RT-Thread/rtconfig.h
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rtthread\cpuport.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdarg.h
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rtthread\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h

@@ -1,0 +1,10 @@
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/src/scheduler.c
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rtthread\scheduler.o: ../RT-Thread/rtconfig.h
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rtthread\scheduler.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdarg.h
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h
+rtthread\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rthw.h

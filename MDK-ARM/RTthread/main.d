@@ -25,10 +25,6 @@ rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
-rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h
-rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 rtthread\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-rtthread\main.o: ../Core/Inc/rtc.h
 rtthread\main.o: ../Core/Inc/usart.h
 rtthread\main.o: ../Core/Inc/gpio.h
-rtthread\main.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdio.h

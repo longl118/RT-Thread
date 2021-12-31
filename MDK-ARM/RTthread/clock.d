@@ -1,0 +1,10 @@
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/src/clock.c
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rthw.h
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rtthread\clock.o: ../RT-Thread/rtconfig.h
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rtthread\clock.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdarg.h
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rtthread\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h

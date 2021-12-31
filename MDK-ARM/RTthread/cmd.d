@@ -1,0 +1,17 @@
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/components/finsh/cmd.c
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rthw.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rtthread\cmd.o: ../RT-Thread/rtconfig.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rtthread\cmd.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdarg.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/components/finsh/finsh.h
+rtthread\cmd.o: ../Middlewares/Third_Party/RealThread_RTOS/components/finsh/finsh_api.h
+rtthread\cmd.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdio.h
+rtthread\cmd.o: D:\MDK5\ARM\ARMCC\bin\..\include\ctype.h
+rtthread\cmd.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdlib.h
+rtthread\cmd.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdint.h
+rtthread\cmd.o: D:\MDK5\ARM\ARMCC\bin\..\include\string.h

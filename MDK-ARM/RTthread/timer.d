@@ -1,0 +1,10 @@
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/src/timer.c
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rtthread\timer.o: ../RT-Thread/rtconfig.h
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rtthread\timer.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdarg.h
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h
+rtthread\timer.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rthw.h

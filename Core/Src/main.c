@@ -19,10 +19,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "rtc.h"
 #include "usart.h"
 #include "gpio.h"
-#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -33,6 +31,8 @@
 /* USER CODE BEGIN PTD */
 
 /* USER CODE END PTD */
+extern void MX_RT_Thread_Init(void);
+extern void MX_RT_Thread_Process(void);
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
@@ -89,54 +89,25 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART1_UART_Init();
-  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-  RTC_DateTypeDef GetData;  //获取日期结构体
 
-  RTC_TimeTypeDef GetTime;   //获取时间结构体
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      while (1)
+  {
     /* USER CODE END WHILE */
+    HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_4);
+		rt_thread_delay(1000);
+    HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_3);
+		rt_thread_delay(1000);
 
     /* USER CODE BEGIN 3 */
-	  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_RESET);
-	  //_delay();
-	  //HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_SET);
-	  //_delay();
-	 /* Get the RTC current Time */
-	  HAL_RTC_GetTime(&hrtc, &GetTime, RTC_FORMAT_BIN);
-      /* Get the RTC current Date */
-      HAL_RTC_GetDate(&hrtc, &GetData, RTC_FORMAT_BIN);
+  }
 
-      /* Display date Format : yy/mm/dd */
-      printf("%02d/%02d/%02d\r\n",2000 + GetData.Year, GetData.Month, GetData.Date);
-	  /* Display date Format : weekday */
-		if(GetData.WeekDay==1){
-			printf("星期一\r\n");
-		}else if(GetData.WeekDay==2){
-			printf("星期二\r\n");
-		}else if(GetData.WeekDay==3){
-			printf("星期三\r\n");
-		}else if(GetData.WeekDay==4){
-			printf("星期四\r\n");
-		}else if(GetData.WeekDay==5){
-			printf("星期五\r\n");
-		}else if(GetData.WeekDay==6){
-			printf("星期六\r\n");
-		}else if(GetData.WeekDay==7){
-			printf("星期日\r\n");
-		}
-	  
-      /* Display time Format : hh:mm:ss */
-      printf("%02d:%02d:%02d\r\n",GetTime.Hours, GetTime.Minutes, GetTime.Seconds);
-
-      printf("\r\n");
-
-      HAL_Delay(1000);
 
   }
   /* USER CODE END 3 */
@@ -150,15 +121,13 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_LSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
-  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
@@ -177,12 +146,6 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
@@ -223,11 +186,5 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-//添加头文件#include "stdio.h"
-int fputc(int ch,FILE *f){
- uint8_t temp[1]={ch};
- HAL_UART_Transmit(&huart1,temp,1,2);
- return ch;
-}
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

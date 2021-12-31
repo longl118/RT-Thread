@@ -1,0 +1,9 @@
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/components/device/device.c
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rtthread\device.o: ../RT-Thread/rtconfig.h
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rtthread\device.o: D:\MDK5\ARM\ARMCC\bin\..\include\stdarg.h
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rtthread\device.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h
